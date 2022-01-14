@@ -36,6 +36,11 @@ body {
 
 .logo{
     height: 35px;
+    cursor: pointer;
+}
+
+.logo:hover{
+    animation: moveUpDown 0.5s ease-out;
 }
 
 .text-box{
@@ -48,6 +53,7 @@ body {
 .heading-primary{
     color: white;
     text-transform: uppercase;
+    backface-visibility: hidden;
 }
 
 .heading-primary-main{
@@ -55,6 +61,7 @@ body {
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation: moveInLeft 2s ease-out;
 }
 
 .heading-primary-sub{
@@ -62,5 +69,53 @@ body {
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 17.5px;
+    animation: moveInRight 2s ease-out;
 }
 
+@keyframes moveInLeft {
+    
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        opacity: 0.7;
+        transform: translateX(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        opacity: 0.7;
+        transform: translateX(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveUpDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}

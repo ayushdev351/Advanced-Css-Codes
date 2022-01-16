@@ -1,13 +1,13 @@
 *,
 *::after,
 *::before {
-    margin: 0;
+    margin: 0;  
     padding: 0;
-    box-sizing: inherit;
+     box-sizing: inherit;   /* Initial Reset */
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 62.5%;        /* 10 px converted to percentage */
 }
 
 body {
@@ -17,6 +17,13 @@ body {
     font-weight: bold;
     color: #777;
     box-sizing: border-box;
+}
+
+span::selection,
+h1::selection,
+p::selection{
+    background-color: white;
+    color: black;
 }
 
 .header{
@@ -54,7 +61,7 @@ body {
     text-align: center;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);      /* Best way to center an element : parent position : relative */
 }
 
 .heading-primary{
@@ -129,6 +136,8 @@ body {
 }
 
 
+ /* LVHA method is always used for styling Links */
+
 .btn:link,
 .btn:visited{
     display: inline-block;
@@ -183,7 +192,6 @@ body {
     animation: moveInUp 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
 }
-
 
 @keyframes moveInUp {
     
